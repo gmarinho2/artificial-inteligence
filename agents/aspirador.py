@@ -10,13 +10,12 @@ class Ambiente:
             self.sala.append(random.randint(0,1))
             i = i + 1
 
-    def sujar_sala(self):
+    def sujar_sala(self, posicao):
         i = 0
         while i < self.getTamanho():
             sujar = (random.random() <= self.taxa)
-            if sujar:
-                indice_sala = random.choice(self.sala)
-                self.sala[indice_sala] = 1
+            if sujar and i != posicao:
+                self.sala[i] = 1
             i = i + 1
 
     def getTamanho(self):
@@ -26,9 +25,10 @@ class AgenteAspiradorReativo:
     def __init__(self, ambiente, posicao, tempo):
 
         direcao = 1 #comeca andando pra direita/starts going right
+        self.pontuacao = 0
 
-        for i in range(0, tempo): #passa o "tempo"/passes "time"
-            
+        for i in range(0, tempo):
+            ambiente.sujar_sala(posicao)
             print("Iteração: ", i)
             print("Posição atual: ", posicao)
             if ambiente.sala[posicao] == 0:
@@ -44,16 +44,20 @@ class AgenteAspiradorReativo:
                 print("") #when it goes to other room, it doesnt clean, we can confirme that when printing
             else:
                 ambiente.sala[posicao] = 0      #limpa a sala/cleans the room
+                self.pontuacao = self.pontuacao + 1
                 print("Estado atual da sala:", meu_ambiente.sala)
                 print("")
-            ambiente.sujar_sala()
 
-#TESTES:
-meu_ambiente = Ambiente(10, 0.2) #number of rooms/quantidade de salas
+    def getPonto(self):
+        return self.pontuacao
+
+#TESTS:
+
+meu_ambiente = Ambiente(10, 0.2) #number of rooms and chance of getting dirty/quantidade de salas e chance de sujar
 print("Estado inicial: ", meu_ambiente.sala)
 print(" ")
 
 meu_agente = AgenteAspiradorReativo(meu_ambiente, 0, 100) #(ambiente, posicao, tempo)
 
 print("Estado final: ", meu_ambiente.sala)
-print(" ")
+print("Pontuação final: ", AgenteAspiradorReativo.getPonto)
