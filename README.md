@@ -1,2 +1,2 @@
 # artificial-inteligence
-Algoritmos utilizados para inteligência artificial implementados em python.
+Algoritmos básicos para o aprendizado de inteligência artificial implementados em python.
