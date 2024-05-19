@@ -6,7 +6,6 @@ class Ambiente:
         self.sala = []
         i = 0
         while i < tamanho:
-            #self.sala.append(0)
             self.sala.append(random.randint(0,1))
             i = i + 1
 
@@ -53,11 +52,11 @@ class AgenteAspiradorReativo:
 
 #TESTS:
 
-meu_ambiente = Ambiente(10, 0.2) #number of rooms and chance of getting dirty/quantidade de salas e chance de sujar
+meu_ambiente = Ambiente(2, 0.2) #number of rooms and chance of getting dirty/quantidade de salas e chance de sujar
 print("Estado inicial: ", meu_ambiente.sala)
 print(" ")
 
-meu_agente = AgenteAspiradorReativo(meu_ambiente, 0, 100) #(ambiente, posicao, tempo)
+meu_agente = AgenteAspiradorReativo(meu_ambiente, 0, 1000) #(ambiente, posicao, tempo)
 
 print("Estado final: ", meu_ambiente.sala)
-print("Pontuação final: ", AgenteAspiradorReativo.getPonto)
+print("Pontuação final: ", meu_agente.getPonto())
