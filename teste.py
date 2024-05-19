@@ -13,13 +13,13 @@ def treinamento(X, Y, iteracao, lr):
         if i % 300 == 0:
             print("Iteração %4d => perda: %.6f" % (i, perda_atual))
 
-        if perda(X, Y, w + lr, b) < perda_atual: # atualizando o coeficiente angular(loss/perda), para mais ou menos
+        if perda(X, Y, w + lr, b) < perda_atual: # Updating weight
             w += lr
-        elif perda(X, Y, w - lr, b) < perda_atual:
+        elif perda(X, Y, w - lr, b) < perda_atual: # Updating weight
             w -= lr
-        elif perda(X, Y, w, b + lr) < perda_atual: # atualizando o coeficiente linear (bias/viés), para mais ou menos
+        elif perda(X, Y, w, b + lr) < perda_atual: # Updating bias
             b += lr
-        elif perda(X, Y, w, b - lr) < perda_atual:
+        elif perda(X, Y, w, b - lr) < perda_atual: # Updating bias
             b -= lr
         else:
             return w, b
@@ -32,8 +32,7 @@ X, Y = np.loadtxt("pizza.txt", skiprows=1, unpack=True)
 
 # treinamento the system
 w, b = treinamento(X, Y, iteracao=10000, lr=0.01)
-print("\nw = %.3f, b = %.3f" % (w, b))
+print("\nw=%.3f, b=%.3f" % (w, b))
 
 # prever the number of pizzas
-previsao = prever(20, w, b) 
-print("Previsão: x = %d => y = %.2f" % (20, previsao))
+print("preverion: x=%d => y=%.2f" % (20, prever(20, w, b)))
