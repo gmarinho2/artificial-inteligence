@@ -27,13 +27,13 @@ def treinamento(X, Y, iteracao, lr):
     raise Exception("Não converge em %d iterações" % iteracao)
 
 
-# Import the dataset
+# importando os dados
 X, Y = np.loadtxt("pizza.txt", skiprows=1, unpack=True)
 
-# treinamento the system
+# treinamento do sistema
 w, b = treinamento(X, Y, iteracao=10000, lr=0.01)
 print("\nw = %.3f, b = %.3f" % (w, b))
 
-# prever the number of pizzas
+# prevendo o numero de pizzas
 previsao = prever(20, w, b) 
 print("Previsão: x = %d => y = %.2f" % (20, previsao))
