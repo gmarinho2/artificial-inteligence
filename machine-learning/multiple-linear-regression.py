@@ -15,7 +15,7 @@ def treinamento(X, Y, iteracao, lr):
         w -= gradiente(X, Y, w) * lr
     return w
 
-ARQUIVO = "life-expectancy-without-country-names.txt"
+ARQUIVO = "dados/life-expectancy-without-country-names.txt"
 x1, x2, x3, y = np.loadtxt(ARQUIVO, skiprows=1, unpack=True)
 X = np.column_stack((np.ones(x1.size), x1, x2, x3))
 Y = y.reshape(-1, 1)
