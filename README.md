@@ -4,7 +4,7 @@ Nesse repositório adiciono minhas experiências com a área da Inteligência Ar
 
 ### Aprendizado Supervisionado
 
-Atualmente possuo modelos preditivos e classificatórios básicos (toy programs). Se encontram no diretório "machine-learning".
+Atualmente possuo modelos preditivos e classificatórios básicos. Se encontram no diretório "machine-learning".
 
 - Modelos Preditivos: 
 
