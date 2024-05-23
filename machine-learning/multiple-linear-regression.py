@@ -1,4 +1,5 @@
 import numpy as np
+import mnist
 
 def prever(X, w):
     return np.matmul(X, w)

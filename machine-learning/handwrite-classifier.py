@@ -1,4 +1,6 @@
 import numpy as np
+import mnist as data
+import matplotlib.pyplot as plt
 
 def sigmoide(z):
     return 1 / (1 + np.exp(-z))
@@ -26,18 +28,13 @@ def treinamento(X, Y, iteracao, lr):
         w -= gradiente(X,w,Y) * lr
     return w
 
-def teste(X, Y, w):
+def teste(X, Y, w, algarismo):
     num_total = X.shape[0]
     resultados_corretos = np.sum(classificar(X, w) == Y)
     porcentagem_sucesso = resultados_corretos * 100 / num_total
-    print("Taxa de sucesso: %d/%d (%.2f%%)" % (resultados_corretos, num_total, porcentagem_sucesso))
+    print("Taxa de sucesso para o digito %d: %d/%d (%.2f%%)" % (algarismo, resultados_corretos, num_total, porcentagem_sucesso))
 
-ARQUIVO = "dados/policia.txt"
-x1, x2, x3, y = np.loadtxt(ARQUIVO, skiprows=1, unpack=True)
-X = np.column_stack((np.ones(x1.size), x1, x2, x3))
-Y = y.reshape(-1, 1)
-w = treinamento(X, Y, iteracao=10000, lr=0.001)
-
-print(w)
-
-teste(X, Y, w)
+#testando:
+for algarismo in range(10):
+    w = treinamento(data.X_treino, data.Y_treino[algarismo], iteracao=100, lr=1e-5) #lr=1e-5
+    teste(data.X_teste, data.Y_teste[algarismo], w, algarismo)
