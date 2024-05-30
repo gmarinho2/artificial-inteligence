@@ -1,6 +1,10 @@
 # Inteligência Artificial
 
 Nesse repositório adiciono minhas experiências com a área da Inteligência Artificial.
+Minhas fontes:
+
+- Artificial Intelligence : a Modern Approach | MLA. Russell, Stuart J.
+- Machine Learning | MIT OpenCourseWare
 
 ### Aprendizado Supervisionado
 
