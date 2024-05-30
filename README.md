@@ -3,10 +3,22 @@
 Nesse repositório adiciono minhas experiências com a área da Inteligência Artificial.
 Minhas fontes:
 
-- Artificial Intelligence : a Modern Approach | MLA. Russell, Stuart J.
+- Artificial Intelligence : a Modern Approach | Russell, Stuart J.
 - Machine Learning | MIT OpenCourseWare
 
+## Agentes :
+_"Agentes que "_
+
+
+## Agentes Lógicos:
+_"Agentes que podem formar representações do mundo, usar um processo de inferência para derivar novas representações sobre o mundo e utilizar essas novas representações para deduzir o que fazer."_
+
+
+
+## Agentes com Aprendizado:
+_"Agentes que podem melhorar seu comportamento através do estudo diligente de suas próprias experiências"_
 ### Aprendizado Supervisionado
+
 
 Atualmente possuo modelos preditivos e classificatórios básicos. Se encontram no diretório "machine-learning".
 
@@ -25,6 +37,6 @@ Atualmente possuo modelos preditivos e classificatórios básicos. Se encontram 
 
 loading...
 
-### Aprendizado profundo
+### Aprendizado Profundo
 
 loading...
