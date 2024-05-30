@@ -6,8 +6,8 @@ Minhas fontes:
 - Artificial Intelligence : a Modern Approach | Russell, Stuart J.
 - Machine Learning | MIT OpenCourseWare
 
-## Agentes :
-_"Agentes que "_
+## Agentes Básicos:
+Agentes iniciais para o aprendizado de IA. 
 
 
 ## Agentes Lógicos:
