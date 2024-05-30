@@ -17,7 +17,7 @@ Agentes básicos de inteligência artificial.
 
 - Agentes:
 
-    1 - [Agente que simula um aspirador de pó em _n_ salas com taxa de aparição de sujeira](https://github.com/gmarinho2/artificial-inteligence/blob/main/agents/aspirador.py))
+    1 - [Agente que simula um aspirador de pó em _n_ salas com taxa de aparição de sujeira](https://github.com/gmarinho2/artificial-inteligence/blob/main/agents/aspirador.py)
 
     2 - [Agente que resolve 8-puzzle utilizando buscas diversas](https://github.com/gmarinho2/artificial-inteligence/blob/main/8-puzzle/codigo_completo.py)
 
